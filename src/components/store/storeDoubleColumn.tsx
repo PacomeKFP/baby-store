@@ -3,66 +3,41 @@ export default function StoreNavigationDoubleColumn() {
     <>
     <div className="row mt-5">
       <div className="col-12 col-lg-6 mb-4 mb-lg-0">
-        <h6 className="w-100 pb-3 border-bottom">Store</h6>
+        <h6 className="w-100 pb-3 border-bottom">Services</h6>
         <div className="d-flex pt-2">
           <ul className="nav flex-column ms-n3">
+          
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Tops
+                La livraison
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Designers
+                Retour ou Echange
               </a>
             </li>
+          
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Tops
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Collection
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Texture
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Sale
+                Ventes
               </a>
             </li>
           </ul>
           <ul className="nav flex-column ms-6 ms-md-11 ms-lg-10">
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Prints
+                Informations produits
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Silk Edition
+                Paiement
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Brands
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Demos
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Showroom
-              </a>
-            </li>
+            
+          
+
           </ul>
         </div>
       </div>
@@ -70,7 +45,7 @@ export default function StoreNavigationDoubleColumn() {
         <h6 className="w-100 pb-3 border-bottom">Categories</h6>
         <div className="d-flex pt-2">
           <ul className="nav flex-column ms-n3">
-            <li className="nav-item">
+           {/* <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
                 Tops
               </a>
@@ -89,7 +64,7 @@ export default function StoreNavigationDoubleColumn() {
               <a className="nav-link text-body text-sm" href="#" target="_blank">
                 Collection
               </a>
-            </li>
+  </li> */}
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
                 Texture
@@ -97,34 +72,20 @@ export default function StoreNavigationDoubleColumn() {
             </li>
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Sale
+              Vetements Enfants
               </a>
             </li>
           </ul>
           <ul className="nav flex-column ms-6 ms-md-11 ms-lg-10">
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Prints
+              chaussures
               </a>
             </li>
+            
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Silk Edition
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Brands
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Demos
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Showroom
+                Vetements Adultes
               </a>
             </li>
           </ul>
