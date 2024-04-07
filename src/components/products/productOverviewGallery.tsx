@@ -1,12 +1,19 @@
+/**
+ * UPDATE: Remplissage de la page product 
+ */
+
 import React from 'react';
 import ProductBadge from './productBadge';
 import ProductRating from '../reviews/reviewRating';
 import ProductAccordion from './productAccordion';
 import ProductImages from './productImages';
 
-interface Props {
-  title: string;
-  price: number;
+
+
+export interface ProductOverviewGalleryProps {
+  codePro: number;
+  nomPro: string;
+  prix: number;
   images: ({
     src: string;
     alt: string;
@@ -14,20 +21,19 @@ interface Props {
   colors: string[];
   rating: number;
   reviews: number;
-  full_description: string;
+  qte: number;
+  description: string;
   data: Map<string,string>
 }
 
 export default function productOverviewGallery({
-  title,
-  price,
+  nomPro,
+  prix,
   images,
   colors,
-  rating,
-  full_description,
-  reviews,
+  description,
   data
-}: Props) {
+}: ProductOverviewGalleryProps) {
   
   return (
     <>
@@ -37,25 +43,25 @@ export default function productOverviewGallery({
           <ProductImages images={images}/>
         }
         <div className="col-12 col-lg-6 mt-5 mt-lg-0">
-          {(title.length != 0) && 
-            <h2>{title}</h2>
+          {(nomPro.length != 0) && 
+            <h2>{nomPro}</h2>
           }
-          {(price.length != 0) && 
+          {(prix != 0) && 
             <>
               <div className="d-flex mb-3">
-                <h4 className="font-weight-normal">${price.toLocaleString()}</h4>
-                <input className="opacity-0" defaultValue={price} />
+                <h4 className="font-weight-normal">${prix.toLocaleString()}</h4>
+                <input className="opacity-0" defaultValue={prix} />
               </div>
             </>
           }
-          <p className="mt-4">{full_description}</p>
+          <p className="mt-4">{description}</p>
 
-          {(rating != 0) && 
+          {/* {(rating != 0) && 
             <div className="d-flex align-items-center">
               <ProductRating rating={rating} reviews={reviews} />
               <span className="ms-2">100 reviews</span>
             </div>
-          }
+          } */}
           
           {(colors.length != 0) && 
             <>

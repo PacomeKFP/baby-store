@@ -9,7 +9,7 @@ export default function StoreNavigationDoubleColumn() {
           
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                La livraison
+                Livraison
               </a>
             </li>
             <li className="nav-item">
@@ -72,20 +72,20 @@ export default function StoreNavigationDoubleColumn() {
             </li>
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-              Vetements Enfants
+              Vetements Bebe
               </a>
             </li>
           </ul>
           <ul className="nav flex-column ms-6 ms-md-11 ms-lg-10">
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-              chaussures
+                Bonnets pour bebes
               </a>
             </li>
             
             <li className="nav-item">
               <a className="nav-link text-body text-sm" href="#" target="_blank">
-                Vetements Adultes
+                Chaussons pour bebes 
               </a>
             </li>
           </ul>

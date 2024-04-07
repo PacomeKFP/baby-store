@@ -96,7 +96,7 @@ export default function ProductQuickview({
                 <p className="mt-md-7 mb-4">What should I buy? <span data-bs-toggle="tooltip" data-bs-placement="top" title="More information related to sizes" data-container="body" data-animation="true"><i className="fas fa-question-circle ms-1"></i></span></p>
               
                 <div className="d-block text-center">
-                  <button className="btn btn-dark btn-lg w-100">Add to Cart</button>
+                  <button className="btn btn-dark btn-lg w-100">Add to Card</button>
                   <p className="mb-0 d-inline text-xl">
                     <i className="fas fa-shield-alt me-2"></i>
                     Premium Quality
