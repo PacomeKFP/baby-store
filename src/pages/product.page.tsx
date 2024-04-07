@@ -1,5 +1,5 @@
 /*
-* La page qui presente les informations d'un produit
+* La page qui presente les informations d'un produit: c'est un peu comme une pub
 *  */
 import data from '../../public/data.json';
 import ProductOverviewGallery, { ProductOverviewGalleryProps } from '../components/products/productOverviewGallery';
