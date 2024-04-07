@@ -38,6 +38,13 @@ export default function AppRouter() {
 					path: 'products/:id',
 					element: <ProductPage/>,
 				},
+
+				{
+					path: 'orders',
+					element: <OrderHistoryPage/>,
+				},
+
+
 				// Page protégées
 				{
 					path: '',
@@ -48,10 +55,7 @@ export default function AppRouter() {
 							path: 'checkout',
 							element: <CheckoutPage/>,
 						},
-						{
-							path: 'orders',
-							element: <OrderHistoryPage/>,
-						},
+						
 						{
 							path: 'basket',
 							element: <ShoppingBasket/>,

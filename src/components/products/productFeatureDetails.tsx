@@ -1,3 +1,5 @@
+import { JSX } from "react/jsx-runtime";
+
 interface Props {
   featuresDetails: Map<string,string>
 }
@@ -6,7 +8,7 @@ export default function ProductAccordion({
   featuresDetails
 }: Props) {
 
-  const prodFeatures = [];
+  const prodFeatures: JSX.Element[] = [];
 
   Object.entries(featuresDetails).map(([title,value]) => {    
     prodFeatures.push(

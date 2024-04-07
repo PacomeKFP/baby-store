@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "01",
-      "thumb_src": "/images/suit-3.jpg",
+      "thumb_src": "/images/bg1.jpg",
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -28,10 +28,12 @@
         "blue", 
         "green"
       ],
+      
       "title": "Basic Starter Pack",
       "price": 399,
       "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
-      "full_description": "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
+      "full_description": "Bienvenue sur la page d'acceuil de notre Boutique de Vetements pour bébé ",
+      "full_description2": "ici vous trouverez nos meilleurs articles pour votre bout de chou 😉",
       "details": "There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn.",
       "highlights": [
         "Oil is a primary source of energy for various sectors, including transportation, industries, and residential use.",
@@ -61,9 +63,9 @@
         "Returns": "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything."
       },
       "featuresDetails": {
-        "Origin": "Oil is a primary source of energy for various sectors, including transportation, industries, and residential use.",
-        "Material": "Oil is highly versatile and used in the production of a wide range of products. It serves as a raw material for manufacturing plastics.",
-        "Dimensions": "Oil is a crucial source of petrochemicals, which are used in the production of plastics."
+        "Origin": "Vetement de premiere qualité, fait a base de coton naturel évite la transpiration et tres resistant.",
+        "Material": "Se lave facilement, et dure plus longtemps pour tenir votre enfant au sec toutela journée.",
+        "Dimensions": "Recomender par lesmedecins et les mamas elle meme."
       },
       "stock": true
     },
@@ -277,50 +279,7 @@
     }
   ],
   "orders": [
-    {
-      "orderNumber": 23791,
-      "products": [
-        {
-          "id": "01",
-          "status": "Processed",
-          "quantity": 1,
-          "dateModified": "March 23, 2023"
-        },
-        {
-          "id": "02",
-          "status": "Delivered",
-          "quantity": 3,
-          "dateModified": "June 28, 2023"
-        }
-      ],
-      "payment": {
-        "cardNumber": "0042",
-        "expiringDate": "06/26"
-      },
-      "date": "March 23, 2023",
-      "address": "362 Ridgewood, Alaska 99669, USA",
-      "email": "michael@email.com",
-      "phoneNumber": "(808) 791-6935"
-    },
-    {
-      "orderNumber": "WB2341",
-      "products": [
-        {
-          "id": "03",
-          "status": "Order Placed",
-          "quantity": 1,
-          "dateModified": "March 23, 2023"
-        }
-      ],
-      "payment": {
-        "cardNumber": "4119",
-        "expiringDate": "06/26"
-      },
-      "date": "March 28, 2023",
-      "address": "362 Ridgewood Dr, Soldotna, Alaska 99669, USA",
-      "email": "john@email.com",
-      "phoneNumber": "(307) 612-7721"
-    },
+
     {
       "orderNumber": "010110",
       "products": [

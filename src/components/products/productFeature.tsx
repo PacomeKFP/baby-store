@@ -1,7 +1,7 @@
 import ProductFeatureImg from './productFeatureImg';
 import ProductFeatureDetails from './productFeatureDetails';
 
-interface Props {
+export interface ImagesProps {
   title: string;
   images: ({
     src: string;
@@ -34,8 +34,8 @@ export default function ProductOverview({
       <div className="row mt-5">
         <div className="col-12 col-lg-6 pe-5">
           <div className="row">
-            <h4 className="mb-3">Product Description</h4>
-            <p className="mb-5">Society has put up so many boundaries, so many limitations on what’s right and wrong that it’s almost impossible to get a pure thought out. It’s like a little kid, a little boy, looking at colors, and no one told him what colors are good, before somebody tells you you shouldn’t like pink because that’s for girls, or you’d instantly become a gay two-year-old.</p>
+            <h4 className="mb-3">Description du Produit </h4>
+            <p className="mb-5">La boutique mets a votre disposition des produits pour vous accompagner dans la satisfaction de votre enfant.</p>
             <ProductFeatureDetails featuresDetails={featuresDetails} />
           </div>
         </div>

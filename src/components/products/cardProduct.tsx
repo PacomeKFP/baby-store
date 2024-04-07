@@ -1,6 +1,6 @@
 import ProductBadge from './productBadge';
 
-interface Props {
+export interface CardProductProps {
   thumb_src: string;
   thumb_alt: string;
   title: string;

@@ -1,4 +1,4 @@
-interface Props {
+export interface CardProductProps {
   thumb_src: string;
   title: string;
   collection: string;

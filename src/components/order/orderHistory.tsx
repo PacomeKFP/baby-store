@@ -50,8 +50,8 @@ export default function OrderHistory({
   return (
     <>
     <div>
-      <h3 className="mb-0">Order history</h3>
-      <p className="mb-5">See your recent orders, download your invoices.</p>
+      <h3 className="mb-0">Historique des ventes</h3>
+      <p className="mb-5">Suivez vos recents achacts et modifier.</p>
 
       {orderHistoryCards}
     </div>

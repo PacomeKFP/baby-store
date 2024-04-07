@@ -1,4 +1,4 @@
-interface Props {
+export interface Full_descriptionProps {
   title: string;
   full_description: string;
   pageHeaderBgImg: string;
@@ -32,7 +32,7 @@ export default function TestimonialsFade({
               <div className="col-lg-8 col-sm-9 text-center mx-auto">
                 <h1 className="text-white mb-4">{title}</h1>
                 <p className="lead text-white mb-sm-6 mb-4">{full_description}</p>
-                <button className="btn btn-white btn-lg">Explore New Collection</button>
+                <button className="btn btn-white btn-lg">Explorer de nouvelle collection</button>
               </div>
             </div>
           </div>
