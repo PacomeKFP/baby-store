@@ -29,9 +29,9 @@
         "green"
       ],
       
-      "title": "Basic Starter Pack",
-      "price": 399,
-      "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
+      "title": "Vetement Maison",
+      "price": 1500,
+      "description": "That’s elves!",
       "full_description": "Bienvenue sur la page d'acceuil de notre Boutique de Vetements pour bébé ",
       "full_description2": "ici vous trouverez nos meilleurs articles pour votre bout de chou 😉",
       "details": "There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn.",
@@ -63,7 +63,7 @@
         "Returns": "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything."
       },
       "featuresDetails": {
-        "Origin": "Vetement de premiere qualité, fait a base de coton naturel évite la transpiration et tres resistant.",
+        "Origin": "Vetements de premiere qualité, fait a base de coton naturel évite la transpiration et tres resistant.",
         "Material": "Se lave facilement, et dure plus longtemps pour tenir votre enfant au sec toutela journée.",
         "Dimensions": "Recomender par lesmedecins et les mamas elle meme."
       },
@@ -93,8 +93,8 @@
       ],
       "color": "Black",
       "colors": ["black", "green", "white"],
-      "title": "Pink Blouse",
-      "price": 1490,
+      "title": "chaussures",
+      "price": 2000,
       "rating": 5,
       "reviews": 117,
       "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
@@ -174,12 +174,12 @@
     },
     {
       "id": "04",
-      "thumb_src": "/images/suit-5.jpg",
-      "thumb_alt": "iPhone_thumb",
+      "thumb_src": "/images/bg1.jpg",
+      "thumb_alt": "photo",
       "color": "Blue",
-      "title": "iPhone",
-      "description": "That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
-      "price": 1599,
+      "title": "Couches",
+      "description": "juste les couches pour bébé",
+      "price": 350,
       "size": "Small",
       "sizes": {
         "XS": 3,
@@ -194,23 +194,23 @@
   "categories": [
     {
       "thumb_src": "/images/category1.jpg",
-      "title": "Silk Dresses",
-      "collection": "Pre-fall"
+      "title": "fraiche rosé",
+      "collection": "Collection Eté"
     },
     {
       "thumb_src": "/images/category2.jpg",
-      "title": "Suits",
-      "collection": "Designers"
+      "title": "Vetement de Maison",
+      "collection": "Collection Maison"
     },
     {
       "thumb_src": "/images/category3.jpg",
-      "title": "Festival",
-      "collection": "Summer"
+      "title": "Vetement de sorties",
+      "collection": "Collection Sorties"
     },
     {
       "thumb_src": "/images/category4.jpg",
-      "title": "Showroom",
-      "collection": "Sale"
+      "title": "Au chaud",
+      "collection": "Collection Hier"
     },
     {
       "thumb_src": "/images/product10.jpg",
@@ -285,19 +285,18 @@
       "products": [
         {
           "id": "04",
-          "status": "Order Placed",
+         
           "quantity": 1,
           "dateModified": "Sep 09, 2023"
         },
         {
           "id": "01",
-          "status": "Shipped",
+          
           "quantity": 1,
           "dateModified": "Sep 12, 2023"
         },
         {
           "id": "02",
-          "status": "Delivered",
           "quantity": 1,
           "dateModified": "Sep 13, 2023"
         }

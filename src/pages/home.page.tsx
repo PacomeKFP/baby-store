@@ -1,6 +1,10 @@
 /*
 * La page d'acceuil de l'application web.
-*  */
+
+* j'ai modifier les textes en francais et j'ai adapté le data.json
+*  j'ai changé le style de la Section categories par rapport a la derniere fois
+*  mais les photos de la Section categories ont un problemes
+*/
 
 
 import data from '../../public/data.json';
@@ -19,45 +23,33 @@ export default function HomePage() {
       pageHeaderBgImg={"../images/bg2.jpg"}
       pageHeaderMinVh="90vh"
     />
-    <div className="container my-5">
-      <div className="d-block text-center mb-5">
+
+      <div className="row mb-8">
+        <div className="d-block text-center mb-5">
         <h3>Nos categories</h3>
-        <a className="text-dark font-weight-bold" href="#">Découvrir nos categories &#62;</a>
+          <a className="text-dark font-weight-bold" href="#">Découvrir nos categories &#62;</a>
+        </div>
+        {data.categories.slice(0, 4).map(category => 
+          <div className="col-md-6 col-lg-3">
+            <CardCategory
+              thumb_src = {category.thumb_src}
+              title = {category.title}
+              collection = {category.collection}
+            />
+          </div>
+        )}
       </div>
 
-        <div className="col-md-6">
-          <CardCategory
-            classList="h-100"
-            cta=""
-            thumb_src={data.categories[4].thumb_src}
-            title={data.categories[4].title} collection={''}          />
-        </div>
-        <div className="col-md-6">
-          <div className="mb-4">
-            <CardCategory
-              classList=""
-              cta=""
-              thumb_src={data.categories[5].thumb_src}
-              title={data.categories[5].title} collection={''}            />
-          </div>
-          <div className="">
-            <CardCategory
-              classList=""
-              cta=""
-              thumb_src={data.categories[6].thumb_src}
-              title={data.categories[6].title} collection={''}            />
-          </div>
-        </div>
-      </div>
 
-    <PromoSectionLarge 
+
+      <PromoSectionLarge 
       title="Nouvelles collections"
       full_description={data.products[0].full_description2} 
       pageHeaderBgImg={"../images/bg1.jpg"} 
       pageHeaderMinVh="50vh"
       pageHeaderRadius="1rem"
-    />
-    <div className="my-5">
+     />
+      <div className="my-5">
       <ProductFeature
         title="Quelques Produits"
         images={data.products[2].images}

@@ -1,3 +1,7 @@
+/*
+* j'ai eteint la rubrique statut de la partie produit d'en bas la
+*/
+
 import OrderProductRow from "./orderProductRow";
 
 interface Props {
@@ -73,6 +77,7 @@ export default function OrderHistoryCard({
               <h6>2000f</h6>
             </div>
           </div>
+
           <button className="btn btn-dark btn-sm mb-md-0 ms-4 md-md-0 me-4" data-bs-toggle="modal" data-bs-target="#invoiceModal1">Voir la facture</button>
           <div className="modal fade" id="invoiceModal1" role="dialog" aria-labelledby="invoiceModal1" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -181,7 +186,7 @@ export default function OrderHistoryCard({
             <tr>
               <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2">Produit</th>
               <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2">Prix</th>
-              <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2">Status</th>
+              <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2"></th>
               <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2">Date</th>
               <th scope="col" className="text-secondary text-xs font-weight-bold border-light ps-2 text-end">Details</th>
             </tr>

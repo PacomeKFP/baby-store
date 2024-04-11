@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+
 import OrderHistoryCard from './orderHistoryCard';
 
-interface Props {
+interface ProductsProps {
   orders: {
     orderNumber: string,
     products: 
@@ -33,10 +36,10 @@ export default function OrderHistory({
   products
 }: Props) {
 
-  let orderHistoryCards = [];
+  const orderHistoryCards = [];
 
   orders.forEach(order => {
-    let orderProducts = [];
+    const orderProducts = [];
 
     order.products.forEach(productDetails => {
       products.forEach(product => {
@@ -48,14 +51,14 @@ export default function OrderHistory({
     orderHistoryCards.push(<OrderHistoryCard order={order} products={orderProducts} />)
   });
   return (
+
     <>
     <div>
       <h3 className="mb-0">Historique des ventes</h3>
-      <p className="mb-5">Suivez vos recents achacts et modifier.</p>
+      <p className="mb-5">Suivez vos recents achacts et modifications.</p>
 
       {orderHistoryCards}
     </div>
-
     </>
     
   );

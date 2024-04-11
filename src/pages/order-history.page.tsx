@@ -1,6 +1,8 @@
 /*
 * La page qui affiche l'historique des commandes
-*  */
+* 
+* j'ai eteint la rubrique statut de la partie produit d'en bas la
+* */
 
 import OrderHistory from '../components/order/orderHistory';
 import data from '../../public/data.json';
@@ -23,7 +25,8 @@ export default function OrderHistoryPage() {
 
 
 <div className="my-10">
-        <OrderHistory orders = {data.orders} products={orderHistoryProducts} />
+        <OrderHistory orders = {data.orders}
+         products={orderHistoryProducts} />
       </div>
 
 
