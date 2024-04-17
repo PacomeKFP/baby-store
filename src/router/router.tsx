@@ -41,8 +41,7 @@ export default function AppRouter() {
 
 				{
 					path: 'orders',
-					element: <ProductPage/>,
-					
+					element: <OrderHistoryPage/>,
 				},
 
 
