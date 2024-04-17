@@ -10,7 +10,7 @@ export default function OrderSummary({
     <>
       <div className="form-check">
         <input className="form-check-input" type="checkbox" value="" checked />
-        <label className="custom-control-label">Same as shipping information</label>
+        <label className="custom-control-label">Même informations de livraison</label>
       </div>
     </>
   );

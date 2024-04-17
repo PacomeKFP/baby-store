@@ -23,9 +23,9 @@ export default function ShoppingCart({ products }: Props) {
   return (
     <>
       <div className="container mt-5">
-        <h2 className="mb-3 text-center">Shopping Cart</h2>
+        <h2 className="mb-3 text-center">Pannier d'achat</h2>
         <h5 className="text-center mb-5">
-          You are eligible for Free Shipping.
+          Vous êtes éligible pour la livraison gratuite.
         </h5>
         <div className="row">
           <div className="col-12 col-lg-7">
@@ -47,16 +47,16 @@ export default function ShoppingCart({ products }: Props) {
           <div className="col-12 col-lg-5 mt-5 mt-lg-0">
             <div className="card shadow-xs border bg-gray-100">
               <div className="card-body p-lg-5">
-                <h5 className="mb-4">Order Summary</h5>
+                <h5 className="mb-4">Résumé de la commande</h5>
                 <OrderSummary subtotal={subtotal} />
                 <button className="btn btn-outline-dark btn-lg w-100">
-                  Checkout
+                  Paiement
                 </button>
                 <button className="btn btn-white btn-lg w-100">
-                  Continue Shopping
+                  Continuer vos achats
                 </button>
                 <p className="text-center">
-                  Tax included. Shipping calculated at checkout.
+                  Taxes incluses. Frais de port calculés lors du paiement.
                 </p>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function ShoppingCart({ products }: Props) {
                   fill="#495057"
                 />
               </svg>
-              Secured Payment with:
+              Paiement sécurisés avec:
             </p>
             <div className="d-flex justify-content-center">
               <svg

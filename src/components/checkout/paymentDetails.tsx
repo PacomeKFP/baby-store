@@ -2,20 +2,20 @@ export default function OrderSummary() {
   return (
     <>
       <div className="form-group">
-        <label>Card Number</label>
-        <input type="text" className="form-control" placeholder="Enter your card number" />
+        <label>Numéro de Carte</label>
+        <input type="text" className="form-control" placeholder="Entrez votre Numéro" />
       </div>
       <div className="row">
         <div className="col-8">
           <div className="form-group">
-            <label>Expiration date (MM/YY)</label>
-            <input type="text" className="form-control" placeholder="Enter the date" />
+            <label>Date d'expiration  (MM/AA)</label>
+            <input type="text" className="form-control" placeholder="Entrez la date" />
           </div>
         </div>
         <div className="col-4">
           <div className="form-group">
-            <label>CVC</label>
-            <input type="text" className="form-control" placeholder="Enter the 3 digits" />
+            <label>Code de Vérification</label>
+            <input type="text" className="form-control" placeholder="_   _   _   _   _   _   _   _" />
           </div>
         </div>
       </div>

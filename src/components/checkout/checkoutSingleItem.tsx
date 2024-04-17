@@ -28,7 +28,7 @@ export default function CheckoutSingleItem({
         </div>
 
         <div className="w-10 text-end">
-          <p className="text-white mb-0 ">${price.toLocaleString()}</p>
+          <p className="text-white mb-0 ">{price.toLocaleString()} XAF</p>
         </div>
       </div>
     </>
