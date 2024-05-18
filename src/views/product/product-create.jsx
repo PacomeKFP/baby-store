@@ -13,8 +13,10 @@ ProductsCreate.propTypes = {
 	open: PropTypes.bool.isRequired,
 	handleClose: PropTypes.func.isRequired,
 	categories: PropTypes.array.isRequired,
+	handleCreateProduct: PropTypes.func.isRequired,
 }
-function ProductsCreate({open, handleClose, categories}) {
+
+function ProductsCreate({open, handleClose, handleCreateProduct, categories}) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const data = {};
@@ -22,8 +24,7 @@ function ProductsCreate({open, handleClose, categories}) {
 		form.forEach((v, k) => data[k] = v);
 
 		const product = new Product(data)
-		console.log(product)
-		ProductsRepository.save(product, ()=>console.log("product", "saved with success"))
+		ProductsRepository.save(product, (pro)=>handleCreateProduct(pro))
 
 	};
 
@@ -91,7 +92,7 @@ function ProductsCreate({open, handleClose, categories}) {
 									categories && categories.length > 0 ?
 										categories.map((category, index) => (
 											<MenuItem key={index} value={category.idCat}> {category.nomCat} </MenuItem>
-										)): "Aucune catégorie pour le moment veuillez en creer d'abord"
+										)) : "Aucune catégorie pour le moment veuillez en creer d'abord"
 								}
 							</Select>
 						</FormControl>

@@ -4,16 +4,14 @@ import {Fab} from "@mui/material";
 import {Link} from "react-router-dom"
 
 AddFab.propTypes = {
-	to: PropTypes.string,
+	handleClick: PropTypes.func.isRequired,
 };
 
-function AddFab({to}) {
+function AddFab({handleClick}) {
 	return (
-		<Link to={ to || "create"}>
-			<Fab sx={{position: "fixed", bottom: 20, right: 16}} color="secondary">
-				<IconPlus/>
-			</Fab>
-		</Link>
+		<Fab onClick={() => handleClick()} sx={{position: "fixed", bottom: 20, right: 16}} color="secondary">
+			<IconPlus/>
+		</Fab>
 	);
 }
 

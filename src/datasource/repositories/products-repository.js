@@ -8,9 +8,10 @@ export default class ProductsRepository {
 	}
 
 	/**
-	*
-	* @Param {Product} product
-	**/
+	 *
+	 * @Param {Product} product
+	 * @param {(product: Product)=>void} callback
+	 **/
 	static save(product, callback) {
 		const promise = HttpClient.post(ProductsRepository.basePath, product);
 
@@ -18,7 +19,7 @@ export default class ProductsRepository {
 		toast.promise(promise, {
 			loading: "Sauvegarde du produit",
 			success: (response) => {
-				callback()
+				callback(response.data)
 				return `Le produit <b>${response.data.nomPro}</b> a été sauvegardé avec success`
 
 			}
@@ -30,7 +31,7 @@ export default class ProductsRepository {
 
 
 		toast.promise(promise, {
-			loading: "Mise à jour de la categorie",
+			loading: "Mise à jour du produit",
 			success: (response) => {
 				callback()
 				return `La categorie ${response.data.nomCat} a été mise à jour`

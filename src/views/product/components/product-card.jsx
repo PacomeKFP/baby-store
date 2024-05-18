@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -10,16 +10,16 @@ import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
 import Paper from '@mui/material/Paper';
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import { useTheme } from '@mui/material/styles';
+import {autoPlay} from 'react-swipeable-views-utils';
+import {useTheme} from '@mui/material/styles';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import { Delete, EditNoteRounded } from '@mui/icons-material';
+import {Delete, EditNoteRounded} from '@mui/icons-material';
 import HttpClient from '@src/datasource/http-client.js';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function ProductCard({ product }) {
+function ProductCard({product}) {
 	const theme = useTheme();
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [activeStep, setActiveStep] = useState(0);
@@ -55,7 +55,7 @@ function ProductCard({ product }) {
 	} = product;
 
 	return (
-		<Card sx={{ width: 345 }}>
+		<Card sx={{width: 345}}>
 			<Paper
 				square
 				elevation={0}
@@ -76,7 +76,7 @@ function ProductCard({ product }) {
 				enableMouseEvents
 			>
 				{images.map((image, index) => (
-					<div key={image.idPhoto} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+					<div key={image.idPhoto} style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 						{Math.abs(activeStep - index) <= 2 ? (
 							<Box
 								component="img"
@@ -101,12 +101,12 @@ function ProductCard({ product }) {
 				nextButton={
 					<Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
 						Suiv.
-						{theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+						{theme.direction === 'rtl' ? <KeyboardArrowLeft/> : <KeyboardArrowRight/>}
 					</Button>
 				}
 				backButton={
 					<Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-						{theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+						{theme.direction === 'rtl' ? <KeyboardArrowRight/> : <KeyboardArrowLeft/>}
 						Préc.
 					</Button>
 				}
@@ -117,7 +117,7 @@ function ProductCard({ product }) {
 				</Typography>
 
 				{isExpanded && (
-					<Box sx={{ mt: 2 }}>
+					<Box sx={{mt: 2}}>
 						<Grid container spacing={1}>
 							<Grid item xs={6}>
 								<Typography variant="body2" color="text.secondary">
@@ -178,16 +178,16 @@ function ProductCard({ product }) {
 					</Box>
 				)}
 			</CardContent>
-			<CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
+			<CardActions sx={{display: 'flex', justifyContent: 'space-between'}}>
 				<Button size="large" onClick={() => setIsExpanded(!isExpanded)}>
 					{isExpanded ? 'Cacher ' : 'Voir '} les détails
 				</Button>
 				<span>
           <Button size="large" color={'secondary'}>
-            <EditNoteRounded color={'secondary'} />
+            <EditNoteRounded color={'secondary'}/>
           </Button>
           <Button size="large" color={'error'}>
-            <Delete color={'error'} />
+            <Delete color={'error'}/>
           </Button>
         </span>
 			</CardActions>

@@ -66,6 +66,14 @@ export default class HttpClient {
 		}
 	}
 
+	static async put(url, data) {
+		try {
+			const response = await HttpClient.axiosInstance.put(this.serverURL + url, data);
+			return Promise.resolve(response);
+		} catch (error) {
+			HttpClient.errorHandler(error, url, 'PATCH');
+		}
+	}
 	static async delete(url) {
 		try {
 			const response = await HttpClient.axiosInstance.delete(this.serverURL + url);

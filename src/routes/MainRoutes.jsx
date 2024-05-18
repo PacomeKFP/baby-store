@@ -9,7 +9,8 @@ import {Outlet} from "react-router-dom";
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('@views/dashboard/Default')));
-const InvoicesPage = Loadable(lazy(() => import('@views/invoices')));
+const InvoicesPage = Loadable(lazy(() => import('@src/views/orders')));
+const UsersPage = Loadable(lazy(() => import('@src/views/users')));
 
 const ProductList = Loadable(lazy(() => import('@views/product/')));
 // const ProductCreate = Loadable(lazy(() => import('@views/product/product-create.jsx')));
@@ -37,8 +38,14 @@ const MainRoutes = {
 			path: 'orders',
 			element: <InvoicesPage/>,
 		},
+
+		{
+			path: 'users',
+			element: <UsersPage/>,
+		},
 		{
 			path: 'products',
+			index: true,
 			loader: CategoriesRepository.getAll,
 			element: <ProductList/>,
 

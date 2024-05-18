@@ -8,7 +8,7 @@ import { useTheme } from "@mui/material/styles";
 
 // third-party
 import ApexCharts from "apexcharts";
-// import Chart from "react-apexcharts";
+import Chart from "react-apexcharts";
 
 // project imports
 import { gridSpacing } from "@store/constant";
@@ -16,7 +16,7 @@ import MainCard from "@ui-component/cards/MainCard";
 import SkeletonTotalGrowthBarChart from "@ui-component/cards/Skeleton/TotalGrowthBarChart";
 
 // chart data
-import chartData from "./chart-data/total-growth-bar-chart";
+import chartData from "./chart-data/total-growth-bar-chart.jsx";
 
 const status = [
   {
@@ -125,6 +125,7 @@ const TotalGrowthBarChart = ({ isLoading }) => {
                 alignItems="center"
                 justifyContent="space-between"
               >
+
                 <Grid item>
                   <Grid container direction="column" spacing={1}>
                     <Grid item>

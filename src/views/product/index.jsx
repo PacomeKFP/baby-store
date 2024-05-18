@@ -24,6 +24,20 @@ function ProductsList() {
 		setSearchTerm('');
 	};
 
+	function handleCreateProduct(product) {
+
+		console.log("updating", product)
+		const updatedCategories = categories.map(category => {
+			if (category.idCat === product.idCategorie) {
+				const c = {...category};
+				c.produits.push(product);
+				return c;
+			}
+			return category;
+		})
+		setCategories(updatedCategories);
+	}
+
 	const applySearch = (products) => products.filter(product =>
 		product.nomPro.toLowerCase().includes(searchTerm.toLowerCase()) || product.description.toLowerCase().includes(searchTerm.toLowerCase())
 	);
@@ -52,10 +66,11 @@ function ProductsList() {
 			</Stack>
 			{
 				categories.map(category => {
-					const products = applySearch(category.produits);
+						const products = applySearch(category.produits);
 						return products && products.length > 0 && (
-							<>
-								<Typography sx={{width: '40%', mt: 6}} variant={'h3'}>{category.nomCat}</Typography>
+							<Grid key={category.idCat}>
+								<Typography id={`cat-${category.idCat}`} sx={{width: '40%', mt: 6}}
+								            variant={'h3'}>{category.nomCat}</Typography>
 								<Grid display={"flex"} wrap={"wrap"} direction={"row"} justifyContent={"start"}
 								      spacing={2} container sx={{mt: 1, pl: 2}}>
 									{
@@ -66,7 +81,7 @@ function ProductsList() {
 										))
 									}
 								</Grid>
-							</>
+							</Grid>
 
 						)
 					}
@@ -74,11 +89,10 @@ function ProductsList() {
 			}
 
 
-			<ProductCreate open={open} handleClose={() => setOpen(false)} categories={categories}/>
-			<Outlet/>
-			<Fab sx={{position: "fixed", bottom: 20, right: 16}} onClick={() => setOpen(true)} color="secondary">
-				<IconPlus/>
-			</Fab>
+			<ProductCreate open={open} handleClose={() => setOpen(false)} handleCreateProduct={(product)=>handleCreateProduct(product)}
+			               categories={categories}/>
+			{/*<Outlet/>*/}
+			<AddFab handleClick={() => setOpen(true)}/>
 		</Box>
 	);
 }

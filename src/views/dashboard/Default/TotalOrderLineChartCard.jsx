@@ -6,7 +6,7 @@ import { Avatar, Box, Button, Grid, Typography } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 
 // third-party
-// import Chart from "react-apexcharts";
+import Chart from "react-apexcharts";
 
 // project imports
 import MainCard from "@ui-component/cards/MainCard";

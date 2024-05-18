@@ -19,7 +19,7 @@ import { useTheme } from "@mui/material/styles";
 import { gridSpacing } from "@store/constant";
 import MainCard from "@ui-component/cards/MainCard";
 import SkeletonPopularCard from "@ui-component/cards/Skeleton/PopularCard";
-// import BajajAreaChartCard from "./BajajAreaChartCard";
+import BajajAreaChartCard from "./BajajAreaChartCard";
 
 // assets
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
@@ -94,7 +94,7 @@ const PopularCard = ({ isLoading }) => {
                 </Grid>
               </Grid>
               <Grid item xs={12} sx={{ pt: "16px !important" }}>
-                {/*<BajajAreaChartCard />*/}
+                <BajajAreaChartCard />
                 Chard Here
               </Grid>
               <Grid item xs={12}>

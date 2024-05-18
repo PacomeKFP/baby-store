@@ -4,11 +4,16 @@ import {useLoaderData, useNavigate} from "react-router-dom";
 import {IconProgressCheck, IconRecycle} from "@tabler/icons-react";
 import FormModal from "@ui-component/modals/form-modal.jsx";
 import CategoriesRepository from "@src/datasource/repositories/categories-repository.js";
+import PropTypes from "prop-types";
 
-CategoryCreate.propTypes = {};
+CategoryCreate.propTypes = {
+	open: PropTypes.bool.isRequired,
+	handleClose: PropTypes.func.isRequired,
+	handleCreateCategory: PropTypes.func.isRequired,
+};
 
 
-function CategoryCreate() {
+function CategoryCreate({open, handleClose, handleCreateCategory}) {
 
 	const navigate = useNavigate();
 
@@ -23,11 +28,13 @@ function CategoryCreate() {
 		const form = new FormData(e.currentTarget);
 		form.forEach((v, k) => data[k] = v);
 
-		CategoriesRepository.save(data.nomCat, () => navigate('/categories'))
+		CategoriesRepository.save(data.nomCat, (category) => handleCreateCategory(category))
 	}
 
 	return (
 		<FormModal
+			open={open}
+			handleClose={handleClose}
 			title={"Créer une nouvelle Categorie"}
 			label={"Entrez les informations relatives à la nouvelle categorie"}
 		>

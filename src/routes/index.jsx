@@ -1,5 +1,5 @@
 import {lazy, Suspense} from 'react';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import {createBrowserRouter, createHashRouter, RouterProvider} from 'react-router-dom';
 
 // routes
 import MainRoutes from './MainRoutes';

@@ -15,7 +15,7 @@ export default class CategoriesRepository {
 		toast.promise(promise, {
 			loading: "Sauvegarde de la categorie",
 			success: (response) => {
-				callback()
+				callback(response.data)
 				return `La categorie <b>${response.data.nomCat}</b> a été crée avec success`
 
 			}
@@ -23,14 +23,14 @@ export default class CategoriesRepository {
 	}
 
 	static update(idCat, nomCat, callback) {
-		const promise = HttpClient.patch(`/api/categories/${idCat}`, {idCat, nomCat});
+		const promise = HttpClient.put(`/api/categories/${idCat}`, {idCat, nomCat});
 
 
 		toast.promise(promise, {
 			loading: "Mise à jour de la categorie",
 			success: (response) => {
 				callback()
-				return `La categorie ${response.data.nomCat} a été mise à jour`
+				return `La categorie ${nomCat} a été mise à jour`
 
 			}
 		});
@@ -42,9 +42,9 @@ export default class CategoriesRepository {
 
 		toast.promise(promise, {
 			loading: "Suppression de la categorie",
-			success: (response) => {
+			success: () => {
 				callback()
-				return `La categorie ${response.data.nomCat} a été supprimée`
+				return `La categorie <b> ${nomCat} </b>a été supprimée`
 
 			}
 		});

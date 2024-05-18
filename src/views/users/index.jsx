@@ -6,7 +6,7 @@ import MainCard from "@ui-component/cards/MainCard";
 
 // ==============================|| SAMPLE PAGE ||============================== //
 
-const InvoicesPage = () => (
+const UsersPage = () => (
 	<>
 		<h2> Les factures ici</h2>
 		<MainCard title="Sample Card">
@@ -22,4 +22,4 @@ const InvoicesPage = () => (
 	</>
 );
 
-export default InvoicesPage;
+export default UsersPage;
