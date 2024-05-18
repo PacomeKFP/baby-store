@@ -6,9 +6,9 @@ import MainCard from "@ui-component/cards/MainCard";
 
 // ==============================|| SAMPLE PAGE ||============================== //
 
-const InvoicesPage = () => (
+const OrdersPage = () => (
 	<>
-		<h2> Les factures ici</h2>
+		<h2> Les commandes ici</h2>
 		<MainCard title="Sample Card">
 			<Typography variant="body2">
 				Lorem ipsum dolor sit amen, consenter nipissing eli, sed do elusion tempos
@@ -22,4 +22,4 @@ const InvoicesPage = () => (
 	</>
 );
 
-export default InvoicesPage;
+export default OrdersPage;

@@ -3,12 +3,13 @@ import {Typography} from "@mui/material";
 
 // project imports
 import MainCard from "@ui-component/cards/MainCard";
+import AddFab from "@ui-component/buttons/add-fab.jsx";
 
 // ==============================|| SAMPLE PAGE ||============================== //
 
 const UsersPage = () => (
 	<>
-		<h2> Les factures ici</h2>
+		<h2> Les Utilisateurs ici</h2>
 		<MainCard title="Sample Card">
 			<Typography variant="body2">
 				Lorem ipsum dolor sit amen, consenter nipissing eli, sed do elusion tempos
@@ -19,6 +20,8 @@ const UsersPage = () => (
 				president, sunk in culpa qui officiate descent molls anim id est labours.
 			</Typography>
 		</MainCard>
+
+		<AddFab handleClick={()=>alert("clicked")}/>
 	</>
 );
 
