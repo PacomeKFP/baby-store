@@ -19,10 +19,10 @@ const dashboard = {
       icon: icons.IconDashboard,
       breadcrumbs: false
     }, {
-      id: 'home-factures',
-      title: 'Factures',
+      id: 'home-invoices',
+      title: 'Commandes',
       type: 'item',
-      url: '/factures',
+      url: '/orders',
       icon: icons.IconArticle,
       breadcrumbs: false
     }

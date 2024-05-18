@@ -9,15 +9,17 @@ FormModal.propTypes = {
 	title: PropTypes.string,
 	label: PropTypes.string,
 	children: PropTypes.node,
+	open: PropTypes.bool,
+	handleClose: PropTypes.func,
 };
 
-function FormModal({title, label, children}) {
+function FormModal({title, label, children, open, handleClose}) {
 	const navigate = useNavigate();
 	const theme = useTheme()
 	return (
 		<Modal
-			open={true}
-			onClose={() => navigate("../")}
+			open={open === undefined ? true : open}
+			onClose={() => handleClose !== undefined ? handleClose() : navigate("../")}
 			aria-labelledby="create-product-modal"
 			aria-describedby="modal-modal-description"
 			keepMounted

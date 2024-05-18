@@ -3,12 +3,16 @@ import {lazy} from 'react';
 // project imports
 import MainLayout from '../layout/MainLayout';
 import Loadable from '../ui-component/Loadable';
+import CategoriesRepository from "@src/datasource/repositories/categories-repository.js";
+import ProductsRepository from "@src/datasource/repositories/products-repository.js";
+import {Outlet} from "react-router-dom";
 
 // dashboard routing
-const DashboardDefault = Loadable(lazy(() => import('../views/dashboard/Default')));
+const DashboardDefault = Loadable(lazy(() => import('@views/dashboard/Default')));
+const InvoicesPage = Loadable(lazy(() => import('@views/invoices')));
 
 const ProductList = Loadable(lazy(() => import('@views/product/')));
-const ProductCreate = Loadable(lazy(() => import('@views/product/product-create.jsx')));
+// const ProductCreate = Loadable(lazy(() => import('@views/product/product-create.jsx')));
 
 const CategoriesList = Loadable(lazy(() => import('@views/categories/')));
 const CategoriesCreate = Loadable(lazy(() => import('@views/categories/category-create')));
@@ -26,26 +30,28 @@ const MainRoutes = {
 			element: <DashboardDefault/>,
 		},
 		{
-			path: '/dashboard',
+			path: 'dashboard',
 			element: <DashboardDefault/>,
 		},
 		{
+			path: 'orders',
+			element: <InvoicesPage/>,
+		},
+		{
 			path: 'products',
+			loader: CategoriesRepository.getAll,
 			element: <ProductList/>,
-			children: [
-				{
-					path: 'create',
-					element: <ProductCreate/>
-				},
-			]
+
 		},
 		{
 			path: 'categories',
 			element: <CategoriesList/>,
+			loader: CategoriesRepository.getAll,
 			children: [
 				{
 					path: 'create',
-					element: <CategoriesCreate/>
+					element: <CategoriesCreate/>,
+
 				},
 			]
 		},

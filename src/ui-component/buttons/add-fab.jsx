@@ -10,7 +10,7 @@ AddFab.propTypes = {
 function AddFab({to}) {
 	return (
 		<Link to={ to || "create"}>
-			<Fab sx={{position: "absolute", bottom: 20, right: 16}} color="secondary">
+			<Fab sx={{position: "fixed", bottom: 20, right: 16}} color="secondary">
 				<IconPlus/>
 			</Fab>
 		</Link>

@@ -13,7 +13,6 @@ import NavCollapse from '../NavCollapse';
 const NavGroup = ({ item }) => {
   const theme = useTheme();
 
-  console.log(theme.typography.menuCaption)
 
   // menu list collapse & items
   const items = item.children?.map((menu) => {

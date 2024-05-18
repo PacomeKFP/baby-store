@@ -1,10 +1,9 @@
 import React from 'react';
-import {Box, Button, Card, CardHeader, Modal, Typography, TextField, Grid} from "@mui/material";
-import {useNavigate} from "react-router-dom";
-import {useTheme} from "@mui/material/styles";
-import {IconCheck, IconProgressCheck, IconRecycle} from "@tabler/icons-react";
-import {toast} from "sonner";
+import {Box, Button, TextField, Grid} from "@mui/material";
+import {useLoaderData, useNavigate} from "react-router-dom";
+import {IconProgressCheck, IconRecycle} from "@tabler/icons-react";
 import FormModal from "@ui-component/modals/form-modal.jsx";
+import CategoriesRepository from "@src/datasource/repositories/categories-repository.js";
 
 CategoryCreate.propTypes = {};
 
@@ -24,10 +23,7 @@ function CategoryCreate() {
 		const form = new FormData(e.currentTarget);
 		form.forEach((v, k) => data[k] = v);
 
-		console.log(data)
-
-		toast.success("Categorie Crée !", {description: `La categorie <strong>${data.nomCat}</strong> a été crée avec success`});
-		navigate("/categories");
+		CategoriesRepository.save(data.nomCat, () => navigate('/categories'))
 	}
 
 	return (

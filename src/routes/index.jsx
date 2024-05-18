@@ -1,12 +1,30 @@
-import { useRoutes } from 'react-router-dom';
+import {lazy, Suspense} from 'react';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 // routes
 import MainRoutes from './MainRoutes';
 import AuthenticationRoutes from './AuthenticationRoutes';
 import AltRoutes from "@routes/AltRoutes.jsx";
 
+
+// project imports
+import PropTypes from "prop-types";
+
+
 // ==============================|| ROUTING RENDER ||============================== //
 
-export default function ThemeRoutes() {
-  return useRoutes([MainRoutes, AuthenticationRoutes, AltRoutes]);
+export function AppRouter({basename}) {
+
+	const router = createBrowserRouter([MainRoutes, AuthenticationRoutes, AltRoutes], {
+			basename: basename || "/"
+		}
+	)
+	return <Suspense fallback={()=> <>Loading ...</> }>
+		<RouterProvider router={router}/>
+	</Suspense>
+	// return routes;
+}
+
+AppRouter.propTypes = {
+	basename: PropTypes.string,
 }

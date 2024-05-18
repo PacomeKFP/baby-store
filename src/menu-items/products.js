@@ -20,14 +20,14 @@ const products = {
       icon: icons.Inventory2Outlined,
       breadcrumbs: false
     },
-    {
-      id: 'products-create',
-      title: 'Nouveau produit',
-      type: 'item',
-      url: '/products/create',
-      icon: icons.IconSquareRoundedPlus,
-      breadcrumbs: false
-    }
+    // {
+    //   id: 'products-create',
+    //   title: 'Nouveau produit',
+    //   type: 'item',
+    //   url: '/products/create',
+    //   icon: icons.IconSquareRoundedPlus,
+    //   breadcrumbs: false
+    // }
   ]
 };
 
