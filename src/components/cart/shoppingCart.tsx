@@ -1,6 +1,8 @@
 import ProductCartItem from "./productCartItem";
 import OrderSummary from "./orderSummary";
 
+
+import { Link } from "react-router-dom";
 interface Props {
   products: {
     thumb_src: string;
@@ -49,12 +51,21 @@ export default function ShoppingCart({ products }: Props) {
               <div className="card-body p-lg-5">
                 <h5 className="mb-4">Résumé de la commande</h5>
                 <OrderSummary subtotal={subtotal} />
+
+
+                <Link to="/checkout">
                 <button className="btn btn-outline-dark btn-lg w-100">
                   Paiement
                 </button>
+                </Link>
+                
+                <Link to="/products">
                 <button className="btn btn-white btn-lg w-100">
                   Continuer vos achats
-                </button>
+                </button>                  
+                </Link>
+
+
                 <p className="text-center">
                   Taxes incluses. Frais de port calculés lors du paiement.
                 </p>

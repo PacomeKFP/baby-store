@@ -1,8 +1,10 @@
 import CheckoutOrderSummary from '../components/checkout/checkoutOrderSummary';
 import data from '../../public/data.json';
+
 /*
 * La page pour le paiement.
 *  */
+
 export default function CheckoutPage() {
 
 let cartItems = [];
@@ -12,8 +14,7 @@ let cartItems = [];
 			<h3>Mode de Paiement</h3>
 			<p>Resumer de commande</p>
 			<CheckoutOrderSummary
-				products={cartItems}
-			/>
+				products={cartItems} textColor={''}			/>
 		</div>
 	</>
 }

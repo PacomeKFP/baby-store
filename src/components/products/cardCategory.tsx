@@ -6,6 +6,7 @@ export interface CardProductProps {
   cta: string;
 }
 
+import { Link } from "react-router-dom";
 
 export default function CardProduct({
   thumb_src,
@@ -26,9 +27,13 @@ export default function CardProduct({
             <div className="d-block mt-10">
               <p className="text-white font-weight-bold mb-1">{collection}</p>
               <h4 className="text-white font-weight-bolder">{title}</h4>
-              {/* {(cta != null) &&  */}
-                <a href="#" className="text-white text-sm font-weight-semibold mb-0">See products &#62;</a>  
-              {/* } */}
+            
+              <Link
+                to="/products"
+                className="">
+                <a className="text-white text-sm font-weight-semibold mb-0">Voir plus &#62;</a>
+              </Link>
+
             </div>
           </div>
         </div>

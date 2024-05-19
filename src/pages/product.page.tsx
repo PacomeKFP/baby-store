@@ -1,15 +1,16 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 /*
+
 * La page qui presente les informations d'un produit: c'est un peu comme une pub
 by me.
 *  */
 
 import data from '../../public/data.json';
-import ProductOverviewGallery, { ProductOverviewGalleryProps } from '../components/products/productOverviewGallery';
+import ProductOverviewGallery from '../components/products/ProductOverviewGallery.tsx';
 
 export default function ProductPage() {
 
-	const product:ProductOverviewGalleryProps = {
+	const product = {
 		"id": "01",
 		"thumb_src": "/images/suit-3.jpg",
 		"thumb_alt": "watch-image",

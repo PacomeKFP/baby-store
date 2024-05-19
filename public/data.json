@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "01",
-      "thumb_src": "/images/bg1.jpg",
+      "thumb_src": "public/images/suit-1.jpg", 
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -71,7 +71,7 @@
     },
     {
       "id": "02",
-      "thumb_src": "/images/suit-1.jpg",
+      "thumb_src": "public/images/suit-6.jpg",
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -131,7 +131,7 @@
     },
     {
       "id": "03",
-      "thumb_src": "/images/suit-2.jpg",
+      "thumb_src": "public/images/suit-7.jpg",
       "thumb_alt": "iMac-image",
       "images": [
         {
@@ -174,7 +174,7 @@
     },
     {
       "id": "04",
-      "thumb_src": "/images/bg1.jpg",
+      "thumb_src": "public/images/bg1.jpg",
       "thumb_alt": "photo",
       "color": "Blue",
       "title": "Couches",
@@ -193,22 +193,22 @@
   ],
   "categories": [
     {
-      "thumb_src": "/images/category1.jpg",
+      "thumb_src": "public/images/category1.jpg",
       "title": "fraiche rosé",
       "collection": "Collection Eté"
     },
     {
-      "thumb_src": "/images/category2.jpg",
+      "thumb_src": "public/images/category2.jpg",
       "title": "Vetement de Maison",
       "collection": "Collection Maison"
     },
     {
-      "thumb_src": "/images/category3.jpg",
+      "thumb_src": "public/images/category3.jpg",
       "title": "Vetement de sorties",
       "collection": "Collection Sorties"
     },
     {
-      "thumb_src": "/images/category4.jpg",
+      "thumb_src": "public/images/category4.jpg",
       "title": "Au chaud",
       "collection": "Collection Hier"
     },

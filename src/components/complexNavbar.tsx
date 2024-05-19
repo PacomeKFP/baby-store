@@ -1,6 +1,5 @@
-import data from '../../public/data.json';
-import CardCategory from './products/cardCategory';
 
+import { Link } from "react-router-dom";
 
 const ComplexNavbar = () => {
   return (
@@ -8,9 +7,11 @@ const ComplexNavbar = () => {
       <div className="container py-2">
         <nav aria-label="breadcrumb">
           <div className="d-flex align-items-center">
-            <span className="text-dark px-3 text-lg font-weight-bold me-4">Astro Ecommerce</span>
+            <span className="text-dark px-3 text-lg font-weight-bold me-4">Freented</span>
           </div>
         </nav>
+
+        {/*
         <ul className="navbar-nav d-none d-lg-flex ms-12">
           <li className="nav-item px-3 py-3 border-radius-sm d-flex align-items-center">
             <a href="#" className="p-0 nav-link">
@@ -27,7 +28,8 @@ const ComplexNavbar = () => {
               Fashion
             </a>
           </li>
-        </ul>
+        </ul> */}
+
         <div className="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <ul className="navbar-nav ms-md-auto  justify-content-end">
             <li className="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -39,6 +41,7 @@ const ComplexNavbar = () => {
                 </div>
               </a>
             </li>
+
             <li className="px-3 nav-item d-flex align-items-center">
               <a href="#" className="p-0 nav-link">
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" className="cursor-pointer fixed-plugin-button-nav" viewBox="0 0 24 24" fill="currentColor">
@@ -46,6 +49,7 @@ const ComplexNavbar = () => {
                 </svg>
               </a>
             </li>
+            
             <li className="nav-item dropdown pe-2 d-flex align-items-center">
               <a href="#" className="p-0 nav-link" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="cursor-pointers">
@@ -53,15 +57,18 @@ const ComplexNavbar = () => {
                 </svg>
               </a>
               <ul className="px-2 py-3 dropdown-menu dropdown-menu-end me-sm-n4" aria-labelledby="dropdownMenuButton">
+
+
+              <Link to="/orders">
                 <li className="mb-2">
                   <a className="dropdown-item border-radius-md" href="#">
                     <div className="py-1 d-flex">
                       <div className="my-auto">
-                        <img src={`${import.meta.env.BASE_URL}images/team-2.jpg`} className="avatar avatar-sm  me-3 " alt="user image" />
+                        <img src={`${import.meta.env.BASE_URL}images/bg1.jpg`} className="avatar avatar-sm  me-3 " alt="user image" />
                       </div>
                       <div className="d-flex flex-column justify-content-center">
                         <h6 className="mb-1 text-sm font-weight-normal">
-                          <span className="font-weight-bold">New message</span> from Laur
+                          <span className="font-weight-bold">Historique</span>
                         </h6>
                         <p className="mb-0 text-xs text-secondary">
                           <i className="fa fa-clock me-1" aria-hidden="true"></i>
@@ -70,118 +77,61 @@ const ComplexNavbar = () => {
                       </div>
                     </div>
                   </a>
-                </li>
-                <li className="mb-2">
-                  <a className="dropdown-item border-radius-md" href="#">
-                    <div className="py-1 d-flex">
-                      <div className="my-auto">
-                        <img src={`${import.meta.env.BASE_URL}logo/logo-spotify.svg`} className="avatar avatar-sm bg-gradient-dark  me-3 " alt="logo spotify" />
-                      </div>
-                      <div className="d-flex flex-column justify-content-center">
-                        <h6 className="mb-1 text-sm font-weight-normal">
-                          <span className="font-weight-bold">New album</span> by Travis Scott
-                        </h6>
-                        <p className="mb-0 text-xs text-secondary">
-                          <i className="fa fa-clock me-1" aria-hidden="true"></i>
-                          1 day
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item border-radius-md" href="#">
-                    <div className="py-1 d-flex">
-                      <div className="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                          <title>credit-card</title>
-                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                              <g transform="translate(1716.000000, 291.000000)">
-                                <g transform="translate(453.000000, 454.000000)">
-                                  <path className="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
-                                  <path className="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                </li>        
+              </Link>
+
+                <Link to="/checkout" >
+                  <li>
+                    <a className="dropdown-item border-radius-md" href="#">
+                      <div className="py-1 d-flex">
+                        <div className="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                          <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <title>credit-card</title>
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                                <g transform="translate(1716.000000, 291.000000)">
+                                  <g transform="translate(453.000000, 454.000000)">
+                                    <path className="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
+                                    <path className="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                                  </g>
                                 </g>
                               </g>
                             </g>
-                          </g>
-                        </svg>
+                          </svg>
+                        </div>
+                        <div className="d-flex flex-column justify-content-center">
+                          <h6 className="mb-1 text-sm font-weight-normal"> Panier </h6>
+                          <p className="mb-0 text-xs text-secondary">
+                            <i className="fa fa-clock me-1" aria-hidden="true"></i>
+                            2 days
+                          </p>
+                        </div>
                       </div>
-                      <div className="d-flex flex-column justify-content-center">
-                        <h6 className="mb-1 text-sm font-weight-normal">
-                          Payment successfully completed
-                        </h6>
-                        <p className="mb-0 text-xs text-secondary">
-                          <i className="fa fa-clock me-1" aria-hidden="true"></i>
-                          2 days
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
+                    </a>
+                  </li>                
+                </Link>
+
               </ul>
             </li>
+            
             <li className="nav-item d-flex align-items-center ps-2">
               <a href="#" className="px-0 nav-link font-weight-bold"></a>
             </li>
-            <li className="nav-item dropdown pe-2 d-flex align-items-center">
-              <a href="#" className="px-0 nav-link font-weight-bold">
-                <div className="avatar avatar-sm position-relative">
-                  <img src={`${import.meta.env.BASE_URL}images/team-1.jpg`} alt="profile_image" className="w-100 border-radius-md" />
-                </div>
-              </a>
-            </li>
+
+            <Link to="/profile">
+              <li className="nav-item dropdown pe-2 d-flex align-items-center">
+                <a href="#" className="px-0 nav-link font-weight-bold">
+                  <div className="avatar avatar-sm position-relative">
+                    <img src={`${import.meta.env.BASE_URL}public/images/bg1.jpg`} alt="profile_image" className="w-100 border-radius-md" />
+                  </div>
+                </a>
+              </li>
+            </Link>
+
           </ul>
         </div>
       </div>
-      <hr className="my-0 horizontal w-100 dark" />
-      <div className="container pt-3 pb-3">
-        <ul className="navbar-nav d-none d-lg-flex">
-          <li className="nav-item dropdown px-3 py-3 border-radius-sm d-flex align-items-center">
-            <a href="#" className="p-0 dropdown-toggle nav-link" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="true">
-              Store
-            </a>
-            <ul className="dropdown-menu dropdown-xxl" aria-labelledby="dropdownProfile" data-bs-popper="static">
-              <div className="row m-3">
-                {data.categories.slice(0, 3).map(category => 
-                  <div className="col-md-4">
-                    <CardCategory
-                      thumb_src = {category.thumb_src}
-                      title = {category.title}
-                      collection = {category.collection}
-                    />
-                  </div>
-                )}
-              </div>
-            </ul>
-          </li>
-          <li className="nav-item dropdown px-3 py-3 border-radius-sm d-flex align-items-center">
-            <a href="#" className="p-0 nav-link">
-              Messages
-            </a>
-          </li>
-          <li className="nav-item dropdown px-3 py-3 border-radius-sm d-flex align-items-center">
-            <a href="#" className="p-0 nav-link">
-              Pricing
-            </a>
-          </li>
-          <li className="nav-item dropdown px-3 py-3 border-radius-sm d-flex align-items-center">
-            <a href="#" className="p-0 nav-link">
-              Notifications
-            </a>
-          </li>
-        </ul>
-        <div className="p-0 ms-md-auto d-flex align-items-center">
-          <div className="input-group">
-            <span className="input-group-text">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="opacity-8">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
-              </svg>
-            </span>
-            <input type="text" className="form-control max-width-200" placeholder="Search" onfocus="focused(this)" onfocusout="defocused(this)" />
-          </div>
-        </div>
-      </div>
+  
     </nav>
   );
 };

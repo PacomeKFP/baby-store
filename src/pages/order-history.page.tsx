@@ -24,7 +24,7 @@ export default function OrderHistoryPage() {
 	return <main>
 
 
-<div className="my-10">
+<div className="my-3">
         <OrderHistory orders = {data.orders}
          products={orderHistoryProducts} />
       </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import ProductBadge from './productBadge';
 import ProductRating from '../reviews/reviewRating';
 import ProductAccordion from './productAccordion';
@@ -37,13 +37,13 @@ export default function productOverviewGallery({
           <ProductImages images={images}/>
         }
         <div className="col-12 col-lg-6 mt-5 mt-lg-0">
-          {(title.length != 0) && 
+          {(title) && 
             <h2>{title}</h2>
           }
-          {(price.length != 0) && 
+          {(price != 0) && 
             <>
               <div className="d-flex mb-3">
-                <h4 className="font-weight-normal">${price.toLocaleString()}</h4>
+                <h4 className="font-weight-normal">${price}</h4>
                 <input className="opacity-0" defaultValue={price} />
               </div>
             </>

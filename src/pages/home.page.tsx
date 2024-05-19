@@ -50,6 +50,7 @@ export default function HomePage() {
       pageHeaderRadius="1rem"
      />
       <div className="my-5">
+        
       <ProductFeature
         title="Quelques Produits"
         images={data.products[2].images}
