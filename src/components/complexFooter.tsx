@@ -1,27 +1,21 @@
-import data from '../../public/data.json';
-import StoreDoubleColumn from '../components/store/storeDoubleColumn';
+
+import { Link } from "react-router-dom";
 
 export default function ComplexFooter() {
   return (
     <>
       <footer>
         <div className="row">
-          <div className="col-12 col-md-4">
-            <h5 className="mt-5">Freented</h5>
-            <p>ici une description</p>
-            {/*<p className="text-body text-sm pe-5">The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.</p>*/}
-          </div>
-          <div className="col-12 col-md-8">
-            <StoreDoubleColumn title={data.products[1].title}/>
-          </div>
+          <Link to="/"> 
+            <div className="d-flex align-items-center col-12 col-md-4">
+              <span className="text- px-2 text-lg font-weight-bold me-4" style={{ color: "red" }}>Voyage</span>
+            </div>
+          </Link>
+
           <div className="col-12 mt-5 mb-lg-0 mb-4">
             <div className="copyright text-center text-sm text-body">
-              Copyright © 
-              <script>
-                document.write(new Date().getFullYear())
-              </script>
-              &nbsp;Freented by &nbsp;
-              <a href="https://www.creative-tim.com" className="text-dark" target="_blank">Creative Tim</a>.
+              Copyright ©  &nbsp;Voyage by &nbsp;
+              <p className="text-dark" >Creative Tim</p>.
             </div>
           </div>
         </div>

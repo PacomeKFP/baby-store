@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "01",
-      "thumb_src": "public/images/suit-1.jpg", 
+      "thumb_src": "public/images/category2.jpeg", 
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -29,10 +29,10 @@
         "green"
       ],
       
-      "title": "Vetement Maison",
+      "title": "Séjour à la plage",
       "price": 1500,
       "description": "That’s elves!",
-      "full_description": "Bienvenue sur la page d'acceuil de notre Boutique de Vetements pour bébé ",
+      "full_description": "Bienvenue sur la page d'acceuil",
       "full_description2": "ici vous trouverez nos meilleurs articles pour votre bout de chou 😉",
       "details": "There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill. I’m not really specifically talented at anything except for the ability to learn.",
       "highlights": [
@@ -63,15 +63,15 @@
         "Returns": "I always felt like I could do anything. That`s the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can`t do anything, you won`t do anything. I was taught I could do everything."
       },
       "featuresDetails": {
-        "Origin": "Vetements de premiere qualité, fait a base de coton naturel évite la transpiration et tres resistant.",
-        "Material": "Se lave facilement, et dure plus longtemps pour tenir votre enfant au sec toutela journée.",
-        "Dimensions": "Recomender par lesmedecins et les mamas elle meme."
+        "Origin": "L'appli fait l'enregistrement pour vous, Demandez vos cartes d'embarquement à l'avance, nous vous les enverrons. Rien de plus simple !",
+        "Material": "Plus d'options de voyage que n'importe qui. L'appli compare plus de 200 hébergements et plus de 900 agences de voitures.",
+        "Dimensions": "Codes de réduction spécifiques à l'application. Économisez encore plus sur votre voyage en réservant dans l'app avec nos codes de réduction exclusifs pour l'app."
       },
       "stock": true
     },
     {
       "id": "02",
-      "thumb_src": "public/images/suit-6.jpg",
+      "thumb_src": "public/images/category3.jpeg",
       "thumb_alt": "watch-image",
       "images": [
         {
@@ -93,7 +93,7 @@
       ],
       "color": "Black",
       "colors": ["black", "green", "white"],
-      "title": "chaussures",
+      "title": "Escapade urbaine",
       "price": 2000,
       "rating": 5,
       "reviews": 117,
@@ -131,7 +131,7 @@
     },
     {
       "id": "03",
-      "thumb_src": "public/images/suit-7.jpg",
+      "thumb_src": "public/images/category4.jpeg",
       "thumb_alt": "iMac-image",
       "images": [
         {
@@ -172,44 +172,67 @@
       },
       "stock": true
     },
+    
     {
       "id": "04",
-      "thumb_src": "public/images/bg1.jpg",
+      "thumb_src": "public/images/category4.jpeg",
       "thumb_alt": "photo",
-      "color": "Blue",
-      "title": "Couches",
-      "description": "juste les couches pour bébé",
-      "price": 350,
-      "size": "Small",
-      "sizes": {
-        "XS": 3,
-        "S": 0,
-        "M": 1,
-        "L": 0,
-        "XL": 6
-      },
+      "title": "Séjour à la plage",
+      "description": "Profitez d'un séjour relaxant à la plage avec nos offres spéciales",
+      "price": 1200,
+      "stock": true
+    },
+    {
+      "id": "04",
+      "thumb_src": "public/images/category3.jpeg",
+      "thumb_alt": "photo",
+      "title": "Aventure en montagne",
+      "description": "Explorez les montagnes avec notre forfait aventure tout compris",
+      "price": 1500,
+      "stock": true
+    },
+    {
+      "id": "04",
+      "thumb_src": "public/images/category2.jpeg",
+      "thumb_alt": "photo",
+      "title": "Escapade urbaine",
+      "description": "Découvrez les plus belles villes du monde avec nos offres d'escapade urbaine",
+      "price": 900,
+      "stock": true
+    },
+    {
+      "id": "01",
+      "thumb_src": "public/images/category1.jpeg",
+      "thumb_alt": "photo",
+      "title": "Croisière de luxe",
+      "description": "Naviguez sur les océans avec style avec nos croisières de luxe",
+      "price": 2500,
       "stock": false
     }
+    
+    
+    
+    
   ],
   "categories": [
     {
-      "thumb_src": "public/images/category1.jpg",
-      "title": "fraiche rosé",
+      "thumb_src": "public/images/category4.jpeg",
+      "title": "En commun",
       "collection": "Collection Eté"
     },
     {
-      "thumb_src": "public/images/category2.jpg",
-      "title": "Vetement de Maison",
-      "collection": "Collection Maison"
+      "thumb_src": "public/images/category3.jpeg",
+      "title": "En couple",
+      "collection": "Séjour à la plage"
     },
     {
-      "thumb_src": "public/images/category3.jpg",
-      "title": "Vetement de sorties",
+      "thumb_src": "public/images/category3.jpeg",
+      "title": "En famille",
       "collection": "Collection Sorties"
     },
     {
-      "thumb_src": "public/images/category4.jpg",
-      "title": "Au chaud",
+      "thumb_src": "public/images/category4.jpeg",
+      "title": "Voyage personnalisé",
       "collection": "Collection Hier"
     },
     {

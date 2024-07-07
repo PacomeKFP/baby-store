@@ -20,7 +20,7 @@ export default function CardProduct({
 
   return (
     <>
-      <a href="#">
+      
         <div className={`card card-background align-items-start mb-4 mb-lg-0 ${classList}`}>
           <div className="full-background" style={{backgroundImage: `url(${`${import.meta.env.BASE_URL}${thumb_src}`})`, backgroundSize: 'cover'}}></div>
           <div className={`card-body ${classBody}`}>
@@ -28,16 +28,14 @@ export default function CardProduct({
               <p className="text-white font-weight-bold mb-1">{collection}</p>
               <h4 className="text-white font-weight-bolder">{title}</h4>
             
-              <Link
-                to="/products"
-                className="">
+              <Link to="/placements" >
                 <a className="text-white text-sm font-weight-semibold mb-0">Voir plus &#62;</a>
               </Link>
 
             </div>
           </div>
         </div>
-      </a>
+      
     </>
   );
-};
+}

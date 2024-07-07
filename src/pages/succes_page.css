@@ -1,0 +1,93 @@
+/* Fichier: PaymentConfirmation.css */
+
+.payment-confirmation {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .success-icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .success-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #28a745;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scale-up 0.5s ease-in-out;
+  }
+  
+  .checkmark {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: block;
+    transform: rotate(45deg);
+  }
+  
+  .checkmark-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .checkmark-stem {
+    position: absolute;
+    width: 5px;
+    height: 25px;
+    background-color: white;
+    top: 20px;
+    left: 18px;
+  }
+  
+  .checkmark-kick {
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    background-color: white;
+    top: 32px;
+    left: 14px;
+  }
+  
+  .fade-in-text {
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  .btn-animated {
+    animation: btn-hover 0.3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes scale-up {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes btn-hover {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  

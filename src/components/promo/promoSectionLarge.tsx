@@ -37,9 +37,9 @@ export default function TestimonialsFade({
                 <p className="lead text-white mb-sm-6 mb-4">{full_description}</p>
 
                 <Link
-                  to="/products"
+                  to="/placements"
                   className="">
-                  <button className="btn btn-white btn-lg">Explorer de nouvelle collection</button>
+                  <button className="btn btn-white btn-lg">Explorer nos Services</button>
                 </Link>
                 
               </div>

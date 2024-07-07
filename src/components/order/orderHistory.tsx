@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 
 
 import OrderHistoryCard from './orderHistoryCard';
@@ -50,16 +49,16 @@ export default function OrderHistory({
     })
     orderHistoryCards.push(<OrderHistoryCard order={order} products={orderProducts} />)
   });
+  
   return (
 
     <>
     <div>
-      <h3 className="mb-0">Historique des ventes</h3>
-      <p className="mb-5">Suivez vos recents achacts et modifications.</p>
-
+      <h3 className="mb-0">Historique des souscrptions</h3>
+      <h5 className="mb-5"> Suivez vos recentes reservations et modifications.</h5>
       {orderHistoryCards}
     </div>
     </>
     
   );
-};
+}

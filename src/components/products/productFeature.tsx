@@ -34,8 +34,8 @@ export default function ProductOverview({
       <div className="row mt-5">
         <div className="col-12 col-lg-6 pe-5">
           <div className="row">
-            <h4 className="mb-3">Description du Produit </h4>
-            <p className="mb-5">La boutique mets a votre disposition des produits pour vous accompagner dans la satisfaction de votre enfant.</p>
+            <h4 className="mb-3">Suivez n'importe quel voyage</h4>
+ 
             <ProductFeatureDetails featuresDetails={featuresDetails} />
           </div>
         </div>
@@ -46,4 +46,4 @@ export default function ProductOverview({
     </div>
     </>
   );
-};
+}

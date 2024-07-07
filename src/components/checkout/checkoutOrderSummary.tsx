@@ -1,8 +1,12 @@
 import PaymentDetails from './paymentDetails';
 import ShippingInfo from './shippingInfo';
-import BillingInfo from './billingInfo';
 import OrderSummary from '../cart/orderSummary';
 import CheckoutSingleItem from '../checkout/checkoutSingleItem';
+
+import data from '../../../public/data.json';
+
+
+import { Link } from "react-router-dom";
 
 interface Props {
   products: ({
@@ -17,12 +21,11 @@ interface Props {
     shipping: number;
     tax: number;
   })[];
-  textColor: string
+ 
 }
 
 export default function CheckoutSummary({
  products,
- textColor
 }: Props) {
 
   let subtotalCheckout = 0;
@@ -30,27 +33,29 @@ export default function CheckoutSummary({
     subtotalCheckout += product.price
   )
 
+  const slicedProducts = data.products.slice(3, 4);
+
   return (
     <>
       <section>
         <div className="row">
           <div className="col-12 col-lg-6 p-3 p-md-5 bg-gray-100">
-            <h5 className="mb-4">Informations</h5>
-            <div className="form-group">
-              <label>Addresse Email </label>
-              <input type="email" className="form-control" placeholder="Entrez votre addresse Email" />
-            </div>
+            <h2 className="mb-4 text-center">Informations</h2>
+            <hr></hr>
 
-            <h5 className="mt-5 mb-4">Addresse de livraison</h5>
             <ShippingInfo />
 
             <h5 className="mt-5 mb-4"> Détails de Paiement</h5>
             <PaymentDetails />
 
             <h5 className="mt-5 mb-4">Information de Paiement</h5>
-            <BillingInfo />
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" value="" checked />
+              <label className="custom-control-label">Même informations de livraison</label>
+            </div>
 
             <hr className="dark horizontal"/>
+            <Link to='/confirmation'>
             <button className="btn btn-dark float-end mt-2 mb-0">
               <svg className="me-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M2.80039 2.80005C2.02719 2.80005 1.40039 3.42685 1.40039 4.20005V4.90005H12.6004V4.20005C12.6004 3.42685 11.9736 2.80005 11.2004 2.80005H2.80039Z" fill="white"/>
@@ -59,25 +64,29 @@ export default function CheckoutSummary({
               Confirmer le paiement
 
             </button>
+            </Link>
+            
           </div>
+
           <div className="col-12 col-lg-6 p-3 p-md-5 bg-dark bg-gradient rounded-end">
-            <p className="text-white opacity-6 mb-0 text-end">Montant</p>
-            <h3 className="text-white mb-4 text-end">{subtotalCheckout.toLocaleString()} XAF</h3>
-            {products.map((product, i) => 
-                <CheckoutSingleItem
-                  thumb_src={product.thumb_src}
-                  thumb_alt={product.thumb_alt}
-                  title={product.title}
-                  color={product.color}
-                  size={product.size}
-                  price={product.price}
-                />
-            )}
-            <OrderSummary subtotal={subtotalCheckout} textColor="white" />
-          </div>
+      {slicedProducts.map((product) => 
+        <CheckoutSingleItem
+          key={product.id} // Ajoutez une clé unique pour chaque produit
+          thumb_src={product.thumb_src}
+          thumb_alt={product.thumb_alt}
+          title={product.title}
+          price={product.price}
+        />
+      )}
+      <OrderSummary 
+        subtotal={slicedProducts.reduce((total, product) => total + product.price, 0)} 
+        textColor="white" 
+      />
+    </div>
+
         </div>
       </section>
     </>
   );
-};
+}
 

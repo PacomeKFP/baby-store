@@ -19,7 +19,7 @@ export default function ProductGallery({
           <img className="w-100 max-height-200 rounded-3" src={`${import.meta.env.BASE_URL}images/product10.jpg`} alt={images[1].alt} />
         </div>
         <div className="col-6">
-          <img className="w-100 max-height-200 rounded-3" src={`${import.meta.env.BASE_URL}images/product9.jpg`} alt={images[3].alt} />
+          <img className="w-100 max-height-200 rounded-3" src={`${import.meta.env.BASE_URL}images/product9.jpeg`} alt={images[3].alt} />
         </div>
       </div>
     </>

@@ -1,10 +1,6 @@
-interface Props {
-  title: string;
-}
 
-export default function OrderSummary({
 
-}: Props) {
+export default function OrderSummary() {
 
   return (
     <>
